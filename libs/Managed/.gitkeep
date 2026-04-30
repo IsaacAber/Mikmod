@@ -1,0 +1,18 @@
+# Game-managed assemblies required for compilation (all references are Private=False,
+# so none of these DLLs are bundled into the output Mikmod.dll).
+#
+# Copy the following files from your local game installation:
+#   %LocalAppData%\Programs\Mikmak2\Game\Mikmak2_Data\Managed\
+#
+#   Core.dll
+#   Games.dll
+#   Game_Common.dll
+#   Main.dll
+#   SFS.dll
+#   Unity.TextMeshPro.dll
+#   UnityEngine.CoreModule.dll
+#   UnityEngine.IMGUIModule.dll
+#   UnityEngine.InputLegacyModule.dll
+#   UnityEngine.TextRenderingModule.dll
+#   UnityEngine.UI.dll
+#   UnityEngine.UIModule.dll

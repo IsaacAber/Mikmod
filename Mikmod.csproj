@@ -55,61 +55,61 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\AppData\Local\Programs\Mikmak2\Game\MelonLoader\net35\0Harmony.dll</HintPath>
+      <HintPath>libs\net35\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Core">
-      <HintPath>..\..\..\AppData\Local\Programs\Mikmak2\Game\Mikmak2_Data\Managed\Core.dll</HintPath>
+      <HintPath>libs\Managed\Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Games">
-      <HintPath>..\..\..\AppData\Local\Programs\Mikmak2\Game\Mikmak2_Data\Managed\Games.dll</HintPath>
+      <HintPath>libs\Managed\Games.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Game_Common">
-      <HintPath>..\..\..\AppData\Local\Programs\Mikmak2\Game\Mikmak2_Data\Managed\Game_Common.dll</HintPath>
+      <HintPath>libs\Managed\Game_Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Main">
-      <HintPath>..\..\..\AppData\Local\Programs\Mikmak2\Game\Mikmak2_Data\Managed\Main.dll</HintPath>
+      <HintPath>libs\Managed\Main.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="MelonLoader">
-      <HintPath>..\..\..\AppData\Local\Programs\Mikmak2\Game\MelonLoader\net35\MelonLoader.dll</HintPath>
+      <HintPath>libs\net35\MelonLoader.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SFS">
-      <HintPath>..\..\..\AppData\Local\Programs\Mikmak2\Game\Mikmak2_Data\Managed\SFS.dll</HintPath>
+      <HintPath>libs\Managed\SFS.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Numerics" />
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>..\..\..\AppData\Local\Programs\Mikmak2\Game\Mikmak2_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+      <HintPath>libs\Managed\Unity.TextMeshPro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\AppData\Local\Programs\Mikmak2\Game\Mikmak2_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>libs\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>..\..\..\AppData\Local\Programs\Mikmak2\Game\Mikmak2_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>libs\Managed\UnityEngine.IMGUIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>..\..\..\AppData\Local\Programs\Mikmak2\Game\Mikmak2_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <HintPath>libs\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>..\..\..\AppData\Local\Programs\Mikmak2\Game\Mikmak2_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>libs\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\..\AppData\Local\Programs\Mikmak2\Game\Mikmak2_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>libs\Managed\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>..\..\..\AppData\Local\Programs\Mikmak2\Game\Mikmak2_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>libs\Managed\UnityEngine.UIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

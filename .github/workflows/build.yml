@@ -1,0 +1,39 @@
+name: Build
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download MelonLoader
+        shell: pwsh
+        run: |
+          $version = "0.6.6"
+          $url = "https://github.com/LavaGang/MelonLoader/releases/download/v$version/MelonLoader.x64.zip"
+          Invoke-WebRequest -Uri $url -OutFile MelonLoader.zip
+          Expand-Archive -Path MelonLoader.zip -DestinationPath MelonLoaderTemp
+          Copy-Item MelonLoaderTemp\MelonLoader\net35\0Harmony.dll libs\net35\
+          Copy-Item MelonLoaderTemp\MelonLoader\net35\MelonLoader.dll libs\net35\
+
+      - name: Build
+        run: |
+          & "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe" `
+            Mikmod.sln `
+            /p:Configuration=Release `
+            /p:Platform="Any CPU" `
+            /p:TargetFrameworkVersion=v4.8 `
+            /clp:ErrorsOnly
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Mikmod
+          path: bin\Release\Mikmod.dll
