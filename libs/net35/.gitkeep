@@ -1,0 +1,4 @@
+# MelonLoader DLLs – populated automatically by the CI workflow (build.yml).
+# To build locally, copy 0Harmony.dll and MelonLoader.dll from
+#   %LocalAppData%\Programs\Mikmak2\Game\MelonLoader\net35\
+# into this directory.
