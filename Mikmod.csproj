@@ -132,7 +132,8 @@
     <None Include="TODO.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
+  <!-- Remove the comment if you are dev on your sys and it's correct.. -->
+  <!-- <PropertyGroup>
     <PostBuildEvent>xcopy "$(TargetPath)" "%25LocalAppData%25\Programs\Mikmak2\Game\Mods" /Y</PostBuildEvent>
-  </PropertyGroup>
+  </PropertyGroup> -->
 </Project>
