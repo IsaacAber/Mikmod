@@ -117,6 +117,8 @@
     <Compile Include="ExceptionHandler.cs" />
     <Compile Include="FreeSpeech.cs" />
     <Compile Include="DebugOverlay.cs" />
+    <Compile Include="FSButtonToggle.cs" />
+    <Compile Include="FSIngameHooks.cs" />
     <Compile Include="MikDashHack.cs" />
     <Compile Include="Mikmod.cs" />
     <Compile Include="ModMenu.cs" />
@@ -127,7 +129,11 @@
     <Compile Include="WindowTweaks.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".editorconfig" />
     <None Include="TODO.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "%25LocalAppData%25\Programs\Mikmak2\Game\Mods" /Y</PostBuildEvent>
+  </PropertyGroup>
 </Project>

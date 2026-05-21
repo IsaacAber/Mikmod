@@ -14,7 +14,7 @@ internal static class SFSPatches
         RawMessages = 2
     }
 
-    public static DebugLevel debugLevel = DebugLevel.ConnectionChange;
+    public static DebugLevel debugLevel = DebugLevel.None;
     public static HashSet<SmartFoxClientAPI.SmartFoxClient> activeClients = new HashSet<SmartFoxClientAPI.SmartFoxClient>();
 }
 

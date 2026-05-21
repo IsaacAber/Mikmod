@@ -148,14 +148,17 @@ namespace Mikmod
             string position = data["p"]?.ToString();
             if (position == null) return;
 
-            int entityId = int.Parse(data["e"].ToString());
-            if (entityId != 1) return;
+            int emoteId = int.Parse(data["e"].ToString());
+            if (emoteId != 1) return;
 
             int senderId = int.Parse(data["s"].ToString());
             string message = FreeSpeech.DecodeModMessage(position);
 
             if (message.Length > FreeSpeech.MAX_MESSAGE_LENGTH)
-                message = message.Substring(0, FreeSpeech.MAX_MESSAGE_LENGTH); MelonLogger.Msg($"[FreeSpeech] packet detected from {senderId}: {message}");
+            {
+                message = message.Substring(0, FreeSpeech.MAX_MESSAGE_LENGTH);
+                MelonLogger.Msg($"[FreeSpeech] packet overload detected from {senderId}: {message}");
+            }
 
             var handler = FreeSpeech.GetUserChatHandler(senderId);
 
@@ -165,7 +168,7 @@ namespace Mikmod
             }
             else
             {
-                MelonLogger.Msg($"[FreeSpeech] No handler found for user {senderId}");
+                MelonLogger.Msg($"[FreeSpeech] No handler found for user {senderId}, can't update chat bubble.");
             }
         }
     }

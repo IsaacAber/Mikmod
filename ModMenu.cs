@@ -2,7 +2,6 @@
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Windows;
 
 namespace Mikmod
 {
@@ -176,22 +175,6 @@ namespace Mikmod
                     GUILayout.EndHorizontal();
                     break;
 
-                case "arcade":
-                    GUILayout.Label("Arcade Mod Options");
-                    GUILayout.Space(5);
-                    GUILayout.Label("Pre hook hacks: (These have to be determind before you enter the game)");
-                    GUI.color = Color.green;
-                    GUILayout.BeginHorizontal();
-                    GUILayout.Label("MikDash debug mode: ");
-                    var NewMikDashHackValue = GUILayout.Toggle(Settings.MikDashHackEnabled.Value, Settings.MikDashHackEnabled.Value ? "Disable" : "Enable");
-                    if (NewMikDashHackValue != Settings.MikDashHackEnabled.Value)
-                    {
-                        Settings.MikDashHackEnabled.Value = NewMikDashHackValue;
-                        MelonPreferences.Save();
-                    }
-                    GUILayout.EndHorizontal();
-                    break;
-
                 default:
                     GUI.color = Color.green;
                     GUILayout.Label($"No hacks found for this scene: {scene.name}");
@@ -224,7 +207,7 @@ namespace Mikmod
                         FreeSpeech.TalkSomeShit(FreeSpeech.inputMessage);
                     }
                     GUILayout.Label("Toggle SFS logging to console:");
-                    if (GUILayout.Button((SFSPatches.debugLevel != SFSPatches.DebugLevel.None) ? "Enable Logging" : "Disable Logging"))
+                    if (GUILayout.Button((SFSPatches.debugLevel == SFSPatches.DebugLevel.None) ? "Enable Logging" : "Disable Logging"))
                     {
                         SFSPatches.debugLevel = (SFSPatches.debugLevel == SFSPatches.DebugLevel.None) ? SFSPatches.DebugLevel.RawMessages : SFSPatches.DebugLevel.None;
                     }
