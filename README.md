@@ -39,7 +39,6 @@ A heads-up display drawn in the top corners of the screen showing:
 |---|---|---|
 | `DisableVsync` | `false` | Forces `vSyncCount = 0` every frame |
 | `UnlimitedFps` | `false` | Removes the frame rate cap (`targetFrameRate = -1`) |
-| `MikDashHackEnabled` | `false` | Enables MikDash debug mode (must be set before entering the arcade) |
 | `MessageLifetime` | `5` | Seconds before a FreeSpeech chat bubble auto-hides (0 = never) |
 
 Settings are saved to `UserData/MelonPreferences.cfg` and persist across sessions.

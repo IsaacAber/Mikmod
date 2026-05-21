@@ -119,7 +119,6 @@
     <Compile Include="DebugOverlay.cs" />
     <Compile Include="FSButtonToggle.cs" />
     <Compile Include="FSIngameHooks.cs" />
-    <Compile Include="MikDashHack.cs" />
     <Compile Include="Mikmod.cs" />
     <Compile Include="ModMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
